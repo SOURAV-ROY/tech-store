@@ -11,20 +11,29 @@ import SingleProduct from "./pages/SingleProductPage";
 import Cart from "./pages/CartPage";
 import Default from "./pages/Default.js";
 
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import SideCart from "./components/SideCart";
+import Footer from "./components/Footer";
+
 class App extends Component {
     render() {
-        return <>
+        return <div>
             {/* navbar, sidebar, cart, footer*/}
+            <Navbar/>
+            <Sidebar/>
+            <SideCart/>
             <Switch>
                 <Route path="/" exact component={Home}/>
                 <Route path="/about" component={About}/>
                 <Route path="/contact" component={Contact}/>
                 <Route path="/products" exact component={Products}/>
-                <Route path="/product/:id" component={SingleProduct}/>
+                <Route path="/products/:id" component={SingleProduct}/>
                 <Route path="/cart" component={Cart}/>
                 <Route component={Default}/>
             </Switch>
-        </>;
+            <Footer/>
+        </div>;
     }
 }
 
