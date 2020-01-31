@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+import {FaHome} from 'react-icons/fa';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import styled from 'styled-components';
 
 // function App() {
 //   return (
@@ -12,12 +14,20 @@ class App extends Component {
     render() {
         return (
             <div>
-                <h1>Hello Sourav</h1>
+                <h1>Hello Sourav<FaHome/></h1>
                 <h1>hello from tech store</h1>
+                <Button>OK</Button>
             </div>
         );
     }
 
 }
+
+const color ='pink';
+const Button = styled.button`
+color: #5fb7ea;
+//background-color: green;
+background-color:${color};
+`;
 
 export default App;
