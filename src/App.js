@@ -16,7 +16,7 @@ class App extends Component {
             <div>
                 <h1>Hello Sourav<FaHome/></h1>
                 <h1>hello from tech store</h1>
-                <Button>OK</Button>
+                <Button large>OK DONE</Button>
             </div>
         );
     }
@@ -28,6 +28,7 @@ const Button = styled.button`
 color: #5fb7ea;
 //background-color: green;
 background-color:${color};
+font-size: ${props=>(props.large? '3rem':'1rem')};
 `;
 
 export default App;
