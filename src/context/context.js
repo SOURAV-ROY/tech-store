@@ -6,12 +6,48 @@ const ProductContext = React.createContext(undefined, undefined);
 //Consumer
 
 class ProductProvider extends Component {
+    state = {
+        sidebarOpen: false,
+        cartOpen: false,
+        cartItems: 0
+    };
+//**********handel Sidebar *****************************************************
+    handelSidebar = () => {
+        this.setState({sidebarOpen: !this.state.sidebarOpen})
+    };
+
+//***************Handel Cart *******************************************************
+    handelCart = () => {
+        this.setState({cartOpen: !this.state.cartOpen})
+    };
+
+//****************Close Cart ***************************************************
+    closeCart = () => {
+        this.setState({cartOpen: false})
+    };
+
+//****************Open Cart ***************************************************
+    openCart = () => {
+        this.setState({cartOpen: true})
+    };
+
 
     render() {
 
         return (
-            <ProductContext.Provider value="hello from context">
+            <ProductContext.Provider
+                value={
+                    {
+                        ...this.state,
+                        handelSidebar: this.handelSidebar,
+                        handelCart: this.handelCart,
+                        closeCart: this.closeCart,
+                        openCart: this.openCart
+                    }
+                }>
+
                 {this.props.children}
+
             </ProductContext.Provider>
         );
     }
