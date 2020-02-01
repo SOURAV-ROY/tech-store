@@ -34,7 +34,7 @@ export default function Sidebar() {
 
 const SideWrapper = styled.nav`
   position: fixed;
-  top: 61px;
+  top: 60px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -63,6 +63,6 @@ const SideWrapper = styled.nav`
     text-decoration: none;
   }
   @media (min-width: 576px) {
-    width: 20rem;
+    width: 15rem;
   }
 `;

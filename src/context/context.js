@@ -11,7 +11,8 @@ class ProductProvider extends Component {
         sidebarOpen: false,
         cartOpen: false,
         cartItems: 11,
-        links: linkData
+        links: linkData,
+        cart: []
     };
 //**********handel Sidebar *****************************************************
     handelSidebar = () => {
