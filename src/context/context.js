@@ -13,22 +13,22 @@ class ProductProvider extends Component {
         cart: []
     };
 
-//********************* handle sidebar*******************************
+//********************* Handle sidebar***********************************
     handleSidebar = () => {
         this.setState({sidebarOpen: !this.state.sidebarOpen});
     };
 
-// ************************************ Handle Cart***********************
+// *********************** Handle Cart **********************************
     handleCart = () => {
         this.setState({cartOpen: !this.state.sidebarOpen});
     };
 
-//*************************close cart*******************************
+//*************************close cart*************************************
     closeCart = () => {
         this.setState({cartOpen: false});
     };
 
-// **************open********************************************************
+// *************************Open Cart*************************************
     openCart = () => {
         this.setState({cartOpen: true});
     };
