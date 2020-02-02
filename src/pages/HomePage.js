@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 export default function HomePage() {
     return (
-        <>
-            <Hero title="awesome gadgets" max="true">
-                <Link to="/products">our products</Link>
+        <div>
+            <Hero title="Awesome Gadgets" max="true">
+                <Link to="/products">OUR PRODUCTS</Link>
             </Hero>
-        </>
+        </div>
     );
 }

@@ -26,7 +26,7 @@ const CartWrapper = styled.div`
   background: var(--mainGrey);
   z-index: 1;
   transform: ${props => (props.show ? "translateX(0)" : "translateX(100%)")};
-  border-left: 2px solid var(--primaryColor);
+  border-left: 4px solid var(--primaryColor);
   transition: var(--mainTransition);
   @media (min-width: 576px) {
     width: 20rem;

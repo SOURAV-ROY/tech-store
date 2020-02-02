@@ -1,56 +1,50 @@
 import React, {Component} from "react";
-import {linkData} from './linkData';
+import {linkData} from "./linkData";
 
-const ProductContext = React.createContext(undefined, undefined);
-
+const ProductContext = React.createContext();
 //Provider
 //Consumer
-
 class ProductProvider extends Component {
     state = {
         sidebarOpen: false,
         cartOpen: false,
-        cartItems: 11,
+        cartItems: 22,
         links: linkData,
         cart: []
     };
-//**********handel Sidebar *****************************************************
-    handelSidebar = () => {
-        this.setState({sidebarOpen: !this.state.sidebarOpen})
+
+//********************* handle sidebar*******************************
+    handleSidebar = () => {
+        this.setState({sidebarOpen: !this.state.sidebarOpen});
     };
 
-//***************Handel Cart *******************************************************
-    handelCart = () => {
-        this.setState({cartOpen: !this.state.cartOpen})
+// ************************************ Handle Cart***********************
+    handleCart = () => {
+        this.setState({cartOpen: !this.state.sidebarOpen});
     };
 
-//****************Close Cart ***************************************************
+//*************************close cart*******************************
     closeCart = () => {
-        this.setState({cartOpen: false})
+        this.setState({cartOpen: false});
     };
 
-//****************Open Cart ***************************************************
+// **************open********************************************************
     openCart = () => {
-        this.setState({cartOpen: true})
+        this.setState({cartOpen: true});
     };
-
 
     render() {
-
         return (
             <ProductContext.Provider
-                value={
-                    {
-                        ...this.state,
-                        handelSidebar: this.handelSidebar,
-                        handelCart: this.handelCart,
-                        closeCart: this.closeCart,
-                        openCart: this.openCart
-                    }
-                }>
-
+                value={{
+                    ...this.state,
+                    handleSidebar: this.handleSidebar,
+                    handleCart: this.handleCart,
+                    closeCart: this.closeCart,
+                    openCart: this.openCart
+                }}
+            >
                 {this.props.children}
-
             </ProductContext.Provider>
         );
     }
