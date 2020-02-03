@@ -7,7 +7,7 @@ const Contact = () => {
             <div className="row">
                 <div className="col-10 mx-auto col-md-6 my-3">
                     <Title title="Contact Us" center/>
-                    <form action="" className="mt-5">
+                    <form action="https://formspree.io/souravroy.info13@gmail.com" method="POST" className="mt-5">
 
                         {/*NAME*/}
                         <div className="form-group">
@@ -46,6 +46,13 @@ const Contact = () => {
                                 className="form-control"
                                 rows="10"
                                 placeholder="Hello There Buddy"
+                            />
+                        </div>
+                        <div className="form-group mt-3">
+                            <input
+                                type="submit"
+                                value="Send"
+                                className="form-control bg-success text-white"
                             />
                         </div>
 
