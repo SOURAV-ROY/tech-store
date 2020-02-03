@@ -43,7 +43,7 @@ body {
 }
 .main-link:hover{
   font-weight: bold;
-  background: var(--mainGrey);
+  background: var(--darkGrey);
   text-decoration: none;
   color: var(--primaryColor);
   outline-color: var(--mainGreen);
