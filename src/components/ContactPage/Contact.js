@@ -25,7 +25,7 @@ const Contact = () => {
                                 type="email"
                                 name="email"
                                 className="form-control"
-                                placeholder="alien@email.com"
+                                placeholder="alien@gmail.com"
                             />
                         </div>
 
@@ -52,7 +52,7 @@ const Contact = () => {
                             <input
                                 type="submit"
                                 value="Send"
-                                className="form-control bg-success text-white"
+                                className="form-control bg-info text-white"
                             />
                         </div>
 
