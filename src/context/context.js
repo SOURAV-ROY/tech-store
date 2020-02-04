@@ -36,7 +36,8 @@ class ProductProvider extends Component {
     setProducts = (products) => {
         let storeProducts = products.map(item => {
             const {id} = item.sys;
-            const product = {id, ...item.fields};
+            const image = item.fields.image.fields.file.url;
+            const product = {id, ...item.fields, image};
             return product;
         });
 
@@ -64,6 +65,7 @@ class ProductProvider extends Component {
     getStorageProduct = () => {
         return []
     };
+
 //*************************Get Totals ***********************************************
     getTotals = () => {
 
@@ -78,6 +80,7 @@ class ProductProvider extends Component {
     syncStorage = () => {
 
     };
+
 //*************************Add To Cart ***********************************************
     addToCart = (id) => {
         console.log(`add to cart ${id}`);
