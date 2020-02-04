@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {linkData} from "./linkData";
 import {socialData} from './socialData';
+import {items} from './productData';
 
 const ProductContext = React.createContext();
 //Provider
@@ -9,20 +10,88 @@ class ProductProvider extends Component {
     state = {
         sidebarOpen: false,
         cartOpen: false,
-        cartItems: 22,
         links: linkData,
         socialIcons: socialData,
-        cart: []
+        cart: [],
+        cartItems: 0,
+        cartSubTotal: 0,
+        cartTotal: 0,
+        cartTax: 0,
+        storeProducts: [],
+        filteredProducts: [],
+        featuredProducts: [],
+        singleProduct: {},
+        loading: false
+
+
+    };
+
+    componentDidMount() {
+//     From content_ful  items
+
+        this.setProducts(items);
+    }
+
+//    Set Products ***************************************************************
+    setProducts = (products) => {
+        let storeProducts = products.map(item => {
+            const {id} = item.sys;
+            const product = {id, ...item.fields};
+            return product;
+        });
+
+        console.log(storeProducts);
+
+//********************************** Featured Products ******************************
+        let featuredProducts = storeProducts.filter(item => item.featured === true);
+
+        this.setState({
+            storeProducts,
+            filteredProducts: storeProducts,
+            featuredProducts,
+            cart: this.getStorageCart(),
+            singleProduct: this.getStorageProduct()
+
+        });
+    };
+
+// ************************** Get Cart From local Storage **************************************
+    getStorageCart = () => {
+        return []
+    };
+
+// ************************** Get Product From local Storage ***********************************
+    getStorageProduct = () => {
+        return []
+    };
+//*************************Get Totals ***********************************************
+    getTotals = () => {
+
+    };
+
+    //*************************Add Totals ***********************************************
+    addTotals = () => {
+
+    };
+
+//*************************Sync Storage ***********************************************
+    syncStorage = () => {
+
+    };
+//*************************Add To Cart ***********************************************
+    addToCart = (id) => {
+        console.log(`add to cart ${id}`);
+    };
+
+//************************* Set Single Product ***********************************************
+    setSingleProduct = (id) => {
+        console.log(`set single product ${id}`);
     };
 
 //********************* Handle sidebar***********************************
     handleSidebar = () => {
         this.setState({sidebarOpen: !this.state.sidebarOpen});
     };
-
-    // closeSidebar = () => {
-    //     this.setState({sidebarOpen: false});
-    // };
 
 // *********************** Handle Cart **********************************
     handleCart = () => {
@@ -45,10 +114,11 @@ class ProductProvider extends Component {
                 value={{
                     ...this.state,
                     handleSidebar: this.handleSidebar,
-                    // closeSidebar: this.closeSidebar,
                     handleCart: this.handleCart,
                     closeCart: this.closeCart,
-                    openCart: this.openCart
+                    openCart: this.openCart,
+                    addToCart: this.addToCart,
+                    setSingleProduct: this.setSingleProduct
                 }}
             >
                 {this.props.children}
