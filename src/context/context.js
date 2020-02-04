@@ -20,6 +20,10 @@ class ProductProvider extends Component {
         this.setState({sidebarOpen: !this.state.sidebarOpen});
     };
 
+    // closeSidebar = () => {
+    //     this.setState({sidebarOpen: false});
+    // };
+
 // *********************** Handle Cart **********************************
     handleCart = () => {
         this.setState({cartOpen: !this.state.cartOpen});
@@ -41,6 +45,7 @@ class ProductProvider extends Component {
                 value={{
                     ...this.state,
                     handleSidebar: this.handleSidebar,
+                    // closeSidebar: this.closeSidebar,
                     handleCart: this.handleCart,
                     closeCart: this.closeCart,
                     openCart: this.openCart
