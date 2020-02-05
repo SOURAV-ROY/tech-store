@@ -19,7 +19,7 @@ export default function Product({product}) {
                                      alt="product"
                                      style={{height: "320px"}}
                                 />
-                                <div className="product-icon">
+                                <div className="product-icons">
                                     <Link
                                         to={`/products/${product.id}`}
                                         onClick={() => setSingleProduct(product.id)
@@ -92,7 +92,7 @@ const ProductWrapper = styled.div`
   }
   .card-body {
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-transform: uppercase;
   }
 `;

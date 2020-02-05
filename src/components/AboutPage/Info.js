@@ -19,7 +19,8 @@ const Info = () => {
 
                     <div className='col-10 mx-auto col-md-6 my-3'>
                         <Title title='about us' center/>
-                        <p className='text-lead text-muted my-3'>About our company
+                        <p className='text-lead text-muted my-3'>
+                            About our company
                             In 2020, Sourav made a disastrous debut during
                             the India tour of Australia and to add to it the media
                             printed some articles alleging that he had, ‘attitude
