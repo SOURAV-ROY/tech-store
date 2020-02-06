@@ -7,6 +7,7 @@ const ProductContext = React.createContext();
 //Provider
 //Consumer
 class ProductProvider extends Component {
+
     state = {
         sidebarOpen: false,
         cartOpen: false,
@@ -83,12 +84,12 @@ class ProductProvider extends Component {
 
 //*************************Add To Cart ***********************************************
     addToCart = (id) => {
-        console.log(`add to cart ${id}`);
+        console.log(`Add to cart ${id}`);
     };
 
 //************************* Set Single Product ***********************************************
     setSingleProduct = (id) => {
-        console.log(`set single product ${id}`);
+        console.log(`Set single product ${id}`);
     };
 
 //********************* Handle sidebar***********************************

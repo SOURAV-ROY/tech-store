@@ -29,7 +29,11 @@ const Info = () => {
                             he was forgotten for four years. It seemed like his career
                             as an international cricketer had ended even before it took off.
                         </p>
-                        <button className="main-link" type="button" style={{marginTop: "1rem"}}>More Info</button>
+
+                        <div className="col text-center">
+                            <button className="main-link" type="button" style={{marginTop: "1rem"}}>More Info</button>
+                        </div>
+
                     </div>
 
                 </div>
