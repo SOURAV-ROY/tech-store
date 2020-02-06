@@ -35,6 +35,7 @@ class ProductProvider extends Component {
 
 //    Set Products ***************************************************************
     setProducts = (products) => {
+
         let storeProducts = products.map(item => {
             const {id} = item.sys;
             const image = item.fields.image.fields.file.url;
@@ -52,8 +53,11 @@ class ProductProvider extends Component {
             filteredProducts: storeProducts,
             featuredProducts,
             cart: this.getStorageCart(),
-            singleProduct: this.getStorageProduct()
+            singleProduct: this.getStorageProduct(),
+            loading: false
 
+        }, () => {
+            this.addTotals();
         });
     };
 
@@ -70,10 +74,37 @@ class ProductProvider extends Component {
 //*************************Get Totals ***********************************************
     getTotals = () => {
 
+        let subTotal = 0;
+        let cartItems = 0;
+
+        this.state.cart.forEach(item => {
+            subTotal += item.total;
+            cartItems += item.count
+        });
+        subTotal = parseFloat(subTotal.toFixed(2));
+        let tax = subTotal * 0.2;
+        tax = parseFloat(tax.toFixed(2));
+        let total = subTotal + tax;
+        total = parseFloat(total.toFixed(2));
+
+        return {
+            cartItems,
+            subTotal,
+            tax,
+            total
+        };
     };
 
     //*************************Add Totals ***********************************************
     addTotals = () => {
+
+        const totals = this.getTotals();
+        this.setState({
+            cartItems: totals.cartItems,
+            cartSubTotal: totals.subTotal,
+            cartTax: totals.tax,
+            cartTotal: totals.total
+        })
 
     };
 
