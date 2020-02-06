@@ -63,7 +63,14 @@ class ProductProvider extends Component {
 
 // ************************** Get Cart From local Storage **************************************
     getStorageCart = () => {
-        return []
+        let cart;
+        if (localStorage.getItem('cart')) {
+            cart = JSON.parse(localStorage.getItem('cart'))
+        } else {
+            cart = [];
+        }
+        return cart;
+
     };
 
 // ************************** Get Product From local Storage ***********************************
@@ -81,6 +88,7 @@ class ProductProvider extends Component {
             subTotal += item.total;
             cartItems += item.count
         });
+
         subTotal = parseFloat(subTotal.toFixed(2));
         let tax = subTotal * 0.2;
         tax = parseFloat(tax.toFixed(2));
@@ -110,6 +118,7 @@ class ProductProvider extends Component {
 
 //*************************Sync Storage ***********************************************
     syncStorage = () => {
+        localStorage.setItem('cart', JSON.stringify(this.state.cart));
 
     };
 
