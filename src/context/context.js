@@ -183,6 +183,29 @@ class ProductProvider extends Component {
         this.setState({cartOpen: true});
     };
 
+//*************Cart Functionality *****************************************
+//*****************Increment *************************************
+    increment = (id) => {
+        console.log(id);
+    };
+
+//*****************Decrement *************************************
+    decrement = (id) => {
+        console.log(id);
+    };
+
+//*****************Remove Item ***********************************
+    removeItem = (id) => {
+        console.log(id);
+    };
+
+//*****************Clear Cart ************************************
+    clearCart = () => {
+        console.log("Just Clear Cart :(");
+    };
+
+//****************************************************************
+
     render() {
         return (
             <ProductContext.Provider
@@ -193,7 +216,12 @@ class ProductProvider extends Component {
                     closeCart: this.closeCart,
                     openCart: this.openCart,
                     addToCart: this.addToCart,
-                    setSingleProduct: this.setSingleProduct
+                    setSingleProduct: this.setSingleProduct,
+                    increment: this.increment,
+                    decrement: this.decrement,
+                    removeItem: this.removeItem,
+                    clearCart: this.clearCart
+
                 }}
             >
                 {this.props.children}

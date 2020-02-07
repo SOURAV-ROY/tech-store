@@ -18,7 +18,7 @@ export default function SideCart() {
                                 return (
                                     <li key={item.id} className="cart-item mb-4">
                                         <img
-                                            width="35px"
+                                            width="40px"
                                             src={`../${item.image}`}
                                             // src={item.image}
                                             alt="Cart item"
@@ -33,7 +33,7 @@ export default function SideCart() {
                         </ul>
 
                         <h4 className="text-capitalize text-main">
-                            cart total: ${cartTotal}
+                            total Price: ${cartTotal}
                         </h4>
 
                         <div className="text-center my-5">
