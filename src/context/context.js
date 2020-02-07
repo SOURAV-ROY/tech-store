@@ -186,17 +186,17 @@ class ProductProvider extends Component {
 //*************Cart Functionality *****************************************
 //*****************Increment *************************************
     increment = (id) => {
-        console.log(id);
+        console.log(` increment ${id}`);
     };
 
 //*****************Decrement *************************************
     decrement = (id) => {
-        console.log(id);
+        console.log(` decrement ${id}`);
     };
 
 //*****************Remove Item ***********************************
     removeItem = (id) => {
-        console.log(id);
+        console.log(` Remove Item ${id}`);
     };
 
 //*****************Clear Cart ************************************

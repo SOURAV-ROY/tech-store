@@ -48,3 +48,7 @@ body {
   color: var(--primaryColor);
   outline-color: var(--mainGreen);
 }
+
+.cart-icon{
+  cursor: pointer;
+}
