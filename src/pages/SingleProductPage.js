@@ -44,6 +44,7 @@ export default function SingleProductPage() {
                                     <h5 className="text-main text-capitalize mb-4">price: ${price}</h5>
                                     <p className="text-capitalize text-title mt-3">Some Info About Product :</p>
                                     <p>{description}</p>
+
                                     <button
                                         className="main-link"
                                         type="button"
@@ -63,9 +64,7 @@ export default function SingleProductPage() {
                                     </Link>
 
                                 </div>
-
                             </div>
-
                         </div>
                     </section>
                 }}
