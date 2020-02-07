@@ -64,11 +64,14 @@ const CartWrapper = styled.div`
   @media (min-width: 576px) {
     width: 20rem;
   }
+  
   overflow:scroll;
   padding: 2rem;
+  
   ul{
   padding: 0 !important;
   }
+  
   .cart-item{
   list-style-type: none;
   }
