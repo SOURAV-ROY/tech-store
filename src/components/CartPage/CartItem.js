@@ -2,6 +2,7 @@ import React from 'react';
 import {FaTrash, FaChevronCircleRight, FaChevronCircleLeft} from 'react-icons/fa';
 
 export default function CartItem({cartItem, increment, decrement, removeItem}) {
+
     const {id, title, price, count, total, image} = cartItem;
 
     return (
@@ -49,7 +50,7 @@ export default function CartItem({cartItem, increment, decrement, removeItem}) {
 
             {/*ITEM TOTAL*/}
             <div className="col-10 mx-auto col-lg-2">
-                <strong className="text-muted">total : ${total}</strong>
+                <strong className="text-muted">item total : ${total}</strong>
             </div>
             {/*END OF ITEM TOTAL*/}
 
