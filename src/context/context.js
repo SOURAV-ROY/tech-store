@@ -203,7 +203,7 @@ class ProductProvider extends Component {
         }, () => {
             this.addTotals();
             this.syncStorage();
-        })
+        });
     };
 
 //*****************Decrement *************************************
@@ -232,7 +232,7 @@ class ProductProvider extends Component {
             }, () => {
                 this.addTotals();
                 this.syncStorage();
-            })
+            });
         }
     };
 
