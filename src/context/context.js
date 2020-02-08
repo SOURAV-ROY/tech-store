@@ -185,14 +185,17 @@ class ProductProvider extends Component {
 
 //*************Cart Functionality *****************************************
 //*****************Increment *************************************
+
     increment = (id) => {
         // console.log(` increment ${id}`);
         let tempCart = [...this.state.cart];
         const cartItem = tempCart.find(item => item.id === id);
         // console.log(cartItem);
         cartItem.count++;
+
         cartItem.total = cartItem.count * cartItem.price;
         cartItem.total = parseFloat(cartItem.total.toFixed(2));
+
         this.setState(() => {
             return {
                 cart: [...tempCart]
@@ -205,7 +208,30 @@ class ProductProvider extends Component {
 
 //*****************Decrement *************************************
     decrement = (id) => {
-        console.log(` decrement ${id}`);
+        // console.log(` decrement ${id}`);
+
+        let tempCart = [...this.state.cart];
+        const cartItem = tempCart.find(item => item.id === id);
+
+        cartItem.count = cartItem.count - 1;
+
+        if (cartItem.count === 0) {
+            this.removeItem(id);
+
+        } else {
+            cartItem.total = cartItem.count * cartItem.price;
+
+            cartItem.total = parseFloat(cartItem.total.toFixed(2));
+
+            this.setState(() => {
+                return {
+                    cart: [...tempCart]
+                }
+            }, () => {
+                this.addTotals();
+                this.syncStorage();
+            })
+        }
     };
 
 //*****************Remove Item ***********************************
@@ -226,7 +252,14 @@ class ProductProvider extends Component {
 
 //*****************Clear Cart ************************************
     clearCart = () => {
-        console.log("Just Clear Cart :(");
+        // console.log("Just Clear Cart :(");
+        this.setState({
+            cart: []
+
+        }, () => {
+            this.addTotals();
+            this.syncStorage();
+        })
     };
 
 //****************************************************************
