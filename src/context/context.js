@@ -63,6 +63,7 @@ class ProductProvider extends Component {
         this.setState({
             storeProducts,
             filteredProducts: storeProducts,
+            // filteredProducts:[],
             featuredProducts,
             cart: this.getStorageCart(),
             singleProduct: this.getStorageProduct(),
