@@ -16,6 +16,18 @@ export default function ProductFilter() {
                     handleChange,
                     storeProducts
                 } = value;
+
+
+                let companies = new Set();
+                companies.add('all');
+                for (let product in storeProducts) {
+                    companies.add(storeProducts[product]["company"])
+                }
+                // let companies = storeProducts.map(item => item.company);
+
+                companies = [...companies];
+                console.log(companies);
+
                 return (
                     <div className="row my-3">
                         <div className="col-10 mx-auto">
@@ -45,9 +57,18 @@ export default function ProductFilter() {
                                         onChange={handleChange}
                                         className="filter-item"
                                     >
-                                        <option value="all">all</option>
-                                        <option value="htc">htc</option>
-                                        <option value="fuji">fuji</option>
+                                        {/*<option value="all">all</option>*/}
+                                        {/*<option value="htc">htc</option>*/}
+                                        {/*<option value="fuji">fuji</option>*/}
+
+                                        {
+                                            companies.map((company, index) => {
+                                                return <option
+                                                    key={index}
+                                                    value={company}
+                                                >{company}</option>
+                                            })
+                                        }
                                     </select>
                                 </div>
                                 {/*END OF CATEGORY SEARCH*/}
@@ -55,7 +76,7 @@ export default function ProductFilter() {
                                 {/*PRICE RANGE*/}
                                 <div>
                                     <label htmlFor="price">
-                                        <p className="mb-2">product price : <span> $ {price}</span></p>
+                                        <p className="mb-2">product price :<span> $ {price}</span></p>
                                     </label>
                                     <input
                                         type="range"
@@ -65,7 +86,7 @@ export default function ProductFilter() {
                                         max={max}
                                         value={price}
                                         onChange={handleChange}
-                                        className="filer-price"
+                                        className="filter-price"
                                     />
                                 </div>
                                 {/*END OF PRICE RANGE*/}
@@ -77,7 +98,7 @@ export default function ProductFilter() {
                                         type="checkbox"
                                         name="shipping"
                                         id="shipping"
-                                        value={shipping && true}
+                                        checked={shipping && true}
                                         onChange={handleChange}
                                     />
                                 </div>
@@ -95,20 +116,20 @@ export default function ProductFilter() {
 
 
 const FilterWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-column-gap: 2rem;
-  grid-row-gap: 1rem;
-  label {
-    font-weight: bold;
-    text-transform: capitalize;
-  }
-  .filter-item,
-  .filter-price {
-    display: block;
-    width: 100%;
-    background: transparent;
-    border-radius: 0.5rem;
-    border: 2px solid var(--darkGrey);
-  }
-`;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-column-gap: 2rem;
+                grid-row-gap: 1rem;
+                label {
+                font-weight: bold;
+                text-transform: capitalize;
+                }
+                .filter-item,
+                .filter-price {
+                display: block;
+                width: 100%;
+                background: transparent;
+                border-radius: 0.5rem;
+                border: 2px solid var(--darkGrey);
+                }
+                `;

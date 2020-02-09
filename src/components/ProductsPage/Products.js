@@ -28,14 +28,14 @@ export default function Products() {
                             </div>
 
                         </div>
-                        {/*********** TOTAL COUNT ***********/}
+                        {/*********** END TOTAL COUNT ***********/}
 
                         {/*ALL OUR PRODUCTS*/}
 
                         <div className="row py-3">
 
                             {filteredProducts.length === 0 ? (
-                                <div className="col text-title text-center">
+                                <div className="col text-title text-danger text-center">
                                     Sorry No Item Matched Your Search !!!
                                 </div>
 
