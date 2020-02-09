@@ -22,7 +22,7 @@ export default function Products() {
                         {/********** TOTAL COUNT ************/}
                         <div className="row">
                             <div className="col-10 mx-auto">
-                                <h6 className="text-title">
+                                <h6 className="text-title text-center">
                                     total products : {filteredProducts.length}
                                 </h6>
                             </div>
