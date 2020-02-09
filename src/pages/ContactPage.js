@@ -6,7 +6,7 @@ import Contact from "../components/ContactPage/Contact";
 export default function ContactPage() {
     return (
         <>
-            <Hero img={contactImg}></Hero>
+            <Hero img={contactImg} title="contact page"/>
             <Contact/>
         </>
     );

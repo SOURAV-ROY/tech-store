@@ -6,7 +6,7 @@ import productsBcg from '../images/productsBcg.jpeg';
 export default function ProductsPage() {
   return (
     <>
-      <Hero img={productsBcg}/>
+      <Hero img={productsBcg} title="products page"/>
       <Products/>
     </>
   );

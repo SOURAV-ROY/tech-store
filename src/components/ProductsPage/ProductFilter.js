@@ -19,8 +19,10 @@ export default function ProductFilter() {
 
 
                 let companies = new Set();
-                companies.add('all');
+                companies.add("all");
+
                 for (let product in storeProducts) {
+
                     companies.add(storeProducts[product]["company"])
                 }
                 // let companies = storeProducts.map(item => item.company);

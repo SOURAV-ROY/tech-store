@@ -6,7 +6,7 @@ import aboutBcg from '../images/aboutBcg.jpeg';
 export default function AboutPage() {
   return (
     <>
-      <Hero img={aboutBcg}/>
+      <Hero img={aboutBcg} title="about page"/>
       <Info/>
     </>
   );
