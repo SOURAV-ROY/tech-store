@@ -50,7 +50,7 @@ export default function CartItem({cartItem, increment, decrement, removeItem}) {
 
             {/*ITEM TOTAL*/}
             <div className="col-10 mx-auto col-lg-2">
-                <strong className="text-muted">item total : ${total}</strong>
+                <strong className="text-muted">sub total : ${total}</strong>
             </div>
             {/*END OF ITEM TOTAL*/}
 
