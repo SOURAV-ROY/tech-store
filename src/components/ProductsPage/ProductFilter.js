@@ -19,7 +19,7 @@ export default function ProductFilter() {
 
 
                 let companies = new Set();
-                companies.add("ALL");
+                companies.add("all");
 
                 for (let product in storeProducts) {
 
@@ -28,7 +28,7 @@ export default function ProductFilter() {
                 // let companies = storeProducts.map(item => item.company);
 
                 companies = [...companies];
-                console.log(companies);
+                // console.log(companies);
 
                 return (
                     <div className="row my-3">
