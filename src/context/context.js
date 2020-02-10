@@ -324,6 +324,18 @@ class ProductProvider extends Component {
             tempProducts = tempProducts.filter(item => item.freeShipping === true);
         }
 //********************************** END SHIPPING ******************************************
+//**************************************SEARCH**********************************************
+        if (search.length > 0) {
+            // eslint-disable-next-line array-callback-return
+            tempProducts = tempProducts.filter(item => {
+                let tempSearch = search.toLowerCase();
+                let temTitle = item.title.toLowerCase().slice(0, search.length);
+                if (tempSearch === temTitle) {
+                    return item;
+                }
+            })
+        }
+//************************************ END SEARCH ******************************************
         this.setState({
             filteredProducts: tempProducts
         });
