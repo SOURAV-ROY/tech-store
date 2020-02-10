@@ -310,22 +310,27 @@ class ProductProvider extends Component {
 
         let tempProducts = [...storeProducts];
 
-        //PRICE FILTER**************************
+//***********************************PRICE FILTER*****************************************
         tempProducts = tempProducts.filter(item => item.price <= tempPrice);
-        //END PRICE FILTER***********************
+//********************************END PRICE FILTER****************************************
 
-        //FILTERING BASED ON COMPANY *****************************
+//***************************** FILTERING BASED ON COMPANY ********************************
         if (company !== "all") {
             tempProducts = tempProducts.filter(item => item.company === company)
         }
-
+//*****************************END FILTERING BASED ON COMPANY *****************************
+//************************************* SHIPPING ******************************************
+        if (shipping) {
+            tempProducts = tempProducts.filter(item => item.freeShipping === true);
+        }
+//********************************** END SHIPPING ******************************************
         this.setState({
             filteredProducts: tempProducts
         });
 
     };
 
-//****************************************************************
+//*****************************************************************************************
 
     render() {
         return (
