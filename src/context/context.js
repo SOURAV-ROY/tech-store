@@ -289,11 +289,21 @@ class ProductProvider extends Component {
         // console.log(`Name: ${name}, Value ${value}`);
 
         this.setState({
-            [name]:value
-        },this.sortData)
+            [name]: value
+        }, this.sortData);
     };
+
     sortData = () => {
-        console.log('sorting data')
+        // console.log('sorting data')
+        const {storeProducts, price, company, shipping, search} = this.state;
+        let tempProducts = [...storeProducts];
+        if (company !== "ALL") {
+            tempProducts = tempProducts.filter(item => item.company === company)
+        }
+        this.setState({
+            filteredProducts: tempProducts
+        });
+
     };
 
 //****************************************************************
