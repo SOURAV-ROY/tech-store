@@ -286,11 +286,14 @@ class ProductProvider extends Component {
         const value = event.target.type === "checkbox"
             ? event.target.checked
             : event.target.value;
-        console.log(`Name: ${name}, Value ${value}`);
+        // console.log(`Name: ${name}, Value ${value}`);
 
+        this.setState({
+            [name]:value
+        },this.sortData)
     };
     sortData = () => {
-
+        console.log('sorting data')
     };
 
 //****************************************************************
