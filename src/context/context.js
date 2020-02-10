@@ -281,7 +281,13 @@ class ProductProvider extends Component {
     };
 //*********** Handle Filtering ***********************************
     handelChange = (event) => {
-        console.log(event);
+        // console.log(event);
+        const name = event.target.name;
+        const value = event.target.type === "checkbox"
+            ? event.target.checked
+            : event.target.value;
+        console.log(`Name: ${name}, Value ${value}`);
+
     };
     sortData = () => {
 

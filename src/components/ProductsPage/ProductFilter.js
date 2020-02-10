@@ -19,7 +19,7 @@ export default function ProductFilter() {
 
 
                 let companies = new Set();
-                companies.add("all");
+                companies.add("ALL");
 
                 for (let product in storeProducts) {
 
