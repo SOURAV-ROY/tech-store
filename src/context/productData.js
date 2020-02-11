@@ -9,7 +9,7 @@ export const items = [
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
       featured: true,
       image: { fields: { file: { url: "img/product-0.png" } } },
-      freeShipping: true
+      freeShipping: false
     }
   },
   {
