@@ -26,11 +26,11 @@ class ProductProvider extends Component {
         singleProduct: {},
         loading: true,
 
-        search: '',
+        search: "",
         price: 0,
         min: 0,
         max: 0,
-        company: 'ALL',
+        company: "ALL",
         shipping: false
 
 
