@@ -177,7 +177,7 @@ class ProductProvider extends Component {
 
 //************************* Set Single Product ***********************************************
     setSingleProduct = (id) => {
-        console.log(`Set single product ${id}`);
+        // console.log(`Set single product ${id}`);
 
         let product = this.state.storeProducts.find(item => item.id === id);
         localStorage.setItem('singleProduct', JSON.stringify(product));
