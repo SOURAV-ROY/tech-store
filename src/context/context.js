@@ -331,8 +331,8 @@ class ProductProvider extends Component {
             // eslint-disable-next-line array-callback-return
             tempProducts = tempProducts.filter(item => {
                 let tempSearch = search.toLowerCase();
-                let temTitle = item.title.toLowerCase().slice(0, search.length);
-                if (tempSearch === temTitle) {
+                let tempTitle = item.title.toLowerCase().slice(0, search.length);
+                if (tempSearch === tempTitle) {
                     return item;
                 }
             })
