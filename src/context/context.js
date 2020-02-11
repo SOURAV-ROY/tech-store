@@ -29,7 +29,7 @@ class ProductProvider extends Component {
         price: 0,
         min: 0,
         max: 0,
-        company: 'all',
+        company: 'ALL',
         shipping: false
 
 
@@ -315,15 +315,17 @@ class ProductProvider extends Component {
 //********************************END PRICE FILTER****************************************
 
 //***************************** FILTERING BASED ON COMPANY ********************************
-        if (company !== "all") {
+        if (company !== "ALL") {
             tempProducts = tempProducts.filter(item => item.company === company)
         }
 //*****************************END FILTERING BASED ON COMPANY *****************************
+
 //************************************* SHIPPING ******************************************
         if (shipping) {
             tempProducts = tempProducts.filter(item => item.freeShipping === true);
         }
 //********************************** END SHIPPING ******************************************
+
 //**************************************SEARCH**********************************************
         if (search.length > 0) {
             // eslint-disable-next-line array-callback-return
