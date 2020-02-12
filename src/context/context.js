@@ -37,7 +37,7 @@ class ProductProvider extends Component {
     };
 
     componentDidMount() {
-//     From content_ful  items
+//************************** From content_ful  items ******************************
 
         client.getEntries({
             content_type: 'techStoreProduct'
