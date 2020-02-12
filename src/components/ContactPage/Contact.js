@@ -35,7 +35,7 @@ const Contact = () => {
                                 type="text"
                                 name="subject"
                                 className="form-control"
-                                placeholder="Important!!!"
+                                placeholder="SUBJECT!!!"
                             />
                         </div>
 
