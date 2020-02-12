@@ -1,5 +1,14 @@
 # Tech Shop #
 
+## COMMANDS ##
+```
+    npm install --save react-router-dom 
+    npm install --save react-icons 
+    npm install --save styled-components 
+    npm install --save bootstrap
+    npm install contentful
+    npm install --save react-paypal-express-checkout
+```
 
 ## Keybindings
 
