@@ -9,7 +9,13 @@
     npm install contentful
     npm install --save react-paypal-express-checkout
 ```
-
+```javascript
+    client.getEntries({
+        content_type: 'techStoreProduct'
+    })
+        .then(response => this.setProducts(response.items))
+        .catch(console.error)
+```
 ## Keybindings
 
 > The <kbd>cmd</kbd> key for _Windows_ is <kbd>ctrl</kbd>.
