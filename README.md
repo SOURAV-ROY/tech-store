@@ -9,6 +9,7 @@
     npm install contentful
     npm install --save react-paypal-express-checkout
 ```
+## Contentful
 ```javascript
     client.getEntries({
         content_type: 'techStoreProduct'
