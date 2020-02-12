@@ -149,7 +149,7 @@ class ProductProvider extends Component {
 //*************************Add To Cart ***********************************************
     addToCart = (id) => {
 
-        console.log(`Add to cart ${id}`);
+        // console.log(`Add to cart ${id}`);
 
         let tempCart = [...this.state.cart];
         let tempProducts = [...this.state.storeProducts];
