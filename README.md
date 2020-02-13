@@ -11,12 +11,13 @@
     npm install contentful
     
 ```js
-    client.getEntries({
-        content_type: 'techStoreProduct'
-    })
-        .then(response => this.setProducts(response.items))
-        .catch(console.error)
+client.getEntries({
+    content_type: 'techStoreProduct'
+})
+    .then(response => this.setProducts(response.items))
+    .catch(console.error)
 ```
+
 ## PayPal ##
     npm install --save react-paypal-express-checkout
     
