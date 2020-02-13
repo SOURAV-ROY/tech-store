@@ -6,17 +6,21 @@
     npm install --save react-icons 
     npm install --save styled-components 
     npm install --save bootstrap
-    npm install contentful
-    npm install --save react-paypal-express-checkout
 ```
-## Contentful
-```javascript
+## Contentful ##
+    npm install contentful
+    
+```js
     client.getEntries({
         content_type: 'techStoreProduct'
     })
         .then(response => this.setProducts(response.items))
         .catch(console.error)
 ```
+## PayPal ##
+    npm install --save react-paypal-express-checkout
+    
+    
 ## Keybindings
 
 > The <kbd>cmd</kbd> key for _Windows_ is <kbd>ctrl</kbd>.
