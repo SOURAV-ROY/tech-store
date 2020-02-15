@@ -138,3 +138,12 @@ getStorageCart = () => {
 
 };
 ```
+## Get Single Product From local Storage ##
+
+```js
+getStorageProduct = () => {
+    return localStorage.getItem('singleProduct')
+        ? JSON.parse(localStorage.getItem('singleProduct'))
+        : {};
+};
+```
