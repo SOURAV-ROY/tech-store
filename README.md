@@ -71,12 +71,18 @@ STORE
 ## Contentful ##
     npm install contentful
     
+### componentDidMount(*){--} ###
+
 ```js
 client.getEntries({
     content_type: 'techStoreProduct'
 })
     .then(response => this.setProducts(response.items))
     .catch(console.error)
+```
+```
+├── context
+    └── contentful.js
 ```
 ```javascript
 export const client = contentful.createClient({
