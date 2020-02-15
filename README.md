@@ -124,3 +124,17 @@ setProducts = (products) => {
     });
 };
 ```
+## Get Cart From local Storage ##
+
+```js
+getStorageCart = () => {
+    let cart;
+    if (localStorage.getItem('cart')) {
+        cart = JSON.parse(localStorage.getItem('cart'))
+    } else {
+        cart = [];
+    }
+    return cart;
+
+};
+```
