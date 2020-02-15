@@ -72,7 +72,6 @@ STORE
     npm install contentful
     
 ### componentDidMount(*){--} ###
-
 ```js
 client.getEntries({
     content_type: 'techStoreProduct'
@@ -92,8 +91,8 @@ export const client = contentful.createClient({
     space: process.env.REACT_APP_SPACE_ID
 });
 ```
-## **Set Products** ##
 
+## **Set Products** ##
 ```js
 setProducts = (products) => {
 
@@ -124,8 +123,8 @@ setProducts = (products) => {
     });
 };
 ```
-## Get Cart From Local Storage ##
 
+## Get Cart From Local Storage ##
 ```js
 getStorageCart = () => {
     let cart;
@@ -138,8 +137,8 @@ getStorageCart = () => {
 
 };
 ```
-## Get Single Product From Local Storage ##
 
+## Get Single Product From Local Storage ##
 ```js
 getStorageProduct = () => {
     return localStorage.getItem('singleProduct')
@@ -147,8 +146,8 @@ getStorageProduct = () => {
         : {};
 };
 ```
-## Get Total :*> ##
 
+## Get Total :*> ##
 ```js
 getTotals = () => {
 
@@ -172,5 +171,19 @@ getTotals = () => {
         tax,
         total
     };
+};
+```
+
+## Add Total + ## 
+```js
+addTotals = () => {
+
+    const totals = this.getTotals();
+    this.setState({
+        cartItems: totals.cartItems,
+        cartSubTotal: totals.subTotal,
+        cartTax: totals.tax,
+        cartTotal: totals.total
+    })
 };
 ```

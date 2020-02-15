@@ -104,7 +104,7 @@ class ProductProvider extends Component {
             : {};
     };
 
-//*************************Get Totals ***********************************************
+//************************* Get Totals ***********************************************
     getTotals = () => {
 
         let subTotal = 0;
@@ -129,7 +129,7 @@ class ProductProvider extends Component {
         };
     };
 
-    //*************************Add Totals ***********************************************
+//************************* Add Totals ***********************************************
     addTotals = () => {
 
         const totals = this.getTotals();
@@ -139,7 +139,6 @@ class ProductProvider extends Component {
             cartTax: totals.tax,
             cartTotal: totals.total
         })
-
     };
 
 //*************************Sync Storage ***********************************************
