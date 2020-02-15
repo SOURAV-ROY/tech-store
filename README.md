@@ -44,8 +44,7 @@ STORE
 |   |── Product.js
 |   |── Sidebar.js
 |   |── SideCart.js
-|   |── Title.js
-│   └── index.js
+│   └── Title.js
 |
 ├── context
 |   |── contentful.js
