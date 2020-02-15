@@ -154,6 +154,19 @@ getStorageProduct = () => {
 };
 ```
 
+## Set Single Product
+```js
+setSingleProduct = (id) => {
+
+    let product = this.state.storeProducts.find(item => item.id === id);
+    localStorage.setItem('singleProduct', JSON.stringify(product));
+    this.setState({
+        singleProduct: {...product},
+        loading: false
+    })
+};
+```
+
 ## Get Total :*> ##
 ```js
 getTotals = () => {
