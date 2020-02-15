@@ -77,6 +77,14 @@ client.getEntries({
     .then(response => this.setProducts(response.items))
     .catch(console.error)
 ```
+```javascript
+export const client = contentful.createClient({
+
+    accessToken: process.env.REACT_APP_ACCESS_TOKEN,
+
+    space: process.env.REACT_APP_SPACE_ID
+});
+```
 
 ## PayPal ##
     npm install --save react-paypal-express-checkout
