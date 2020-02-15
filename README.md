@@ -13,8 +13,8 @@ STORE
 ├── App.js
 │   
 ├── components
-│   |── Aboutpage
-│   |   └── Info
+│   |── AboutPage
+│   |   └── Info.js
 |   |
 │   ├── CartPage
 │   |   |── Cart.js
@@ -44,6 +44,25 @@ STORE
 |   |── SideCart.js
 |   |── Title.js
 │   └── index.js
+|
+├── context
+|   |── contentful.js
+|   |── context.js
+|   |── linkData.js
+|   |── productData.js
+|   |── socialData.js
+│   └── package.json
+|
+|── images
+|
+├── pages
+|   |── AboutPage.js
+|   |── CartPage.js
+|   |── ContactPage.js
+|   |── DefaultPage.js
+|   |── HomePage.js
+|   |── ProductsPage.js
+│   └── SingleProductPage.js  
 |
 └── index.js
 ```
