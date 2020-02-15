@@ -236,3 +236,56 @@ addToCart = (id) => {
     })
 };
 ```
+
+## Increment Item With Price
+```js
+increment = (id) => {
+    let tempCart = [...this.state.cart];
+    const cartItem = tempCart.find(item => item.id === id);
+    cartItem.count++;
+
+    cartItem.total = cartItem.count * cartItem.price;
+    cartItem.total = parseFloat(cartItem.total.toFixed(2));
+
+    this.setState(() => {
+        return {
+            cart: [...tempCart]
+        }
+
+    }, () => {
+        this.addTotals();
+        this.syncStorage();
+    });
+};
+```
+
+## Decrement Item With Price
+```js
+decrement = (id) => {
+
+    let deTempCart = [...this.state.cart];
+    const deCartItem = deTempCart.find(item => item.id === id);
+
+    deCartItem.count = deCartItem.count - 1;
+
+    if (deCartItem.count === 0) {
+        this.removeItem(id);
+
+    } else {
+
+        deCartItem.total = deCartItem.count * deCartItem.price;
+
+        deCartItem.total = parseFloat(deCartItem.total.toFixed(2));
+
+        this.setState(() => {
+            return {
+                cart: [...deTempCart]
+            }
+
+        }, () => {
+            this.addTotals();
+            this.syncStorage();
+        });
+    }
+};
+```
