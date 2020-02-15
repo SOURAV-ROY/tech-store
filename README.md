@@ -289,3 +289,53 @@ decrement = (id) => {
     }
 };
 ```
+
+# SORT DATA #
+```js
+sortData = () => {
+
+    const {
+        storeProducts,
+        price,
+        company,
+        shipping,
+        search
+    } = this.state;
+
+    let tempPrice = parseInt(price);
+
+    let tempProducts = [...storeProducts];
+
+//***********************************PRICE FILTER*****************************************
+    tempProducts = tempProducts.filter(item => item.price <= tempPrice);
+//********************************END PRICE FILTER****************************************
+
+//***************************** FILTERING BASED ON COMPANY ********************************
+    if (company !== "ALL") {
+        tempProducts = tempProducts.filter(item => item.company === company)
+    }
+//*****************************END FILTERING BASED ON COMPANY *****************************
+
+//************************************* SHIPPING ******************************************
+    if (shipping) {
+        tempProducts = tempProducts.filter(item => item.freeShipping === true);
+    }
+//********************************** END SHIPPING ******************************************
+
+//**************************************SEARCH**********************************************
+    if (search.length > 0) {
+        tempProducts = tempProducts.filter(item => {
+            let tempSearch = search.toLowerCase();
+            let tempTitle = item.title.toLowerCase().slice(0, search.length);
+            if (tempSearch === tempTitle) {
+                return item;
+            }
+        })
+    }
+//************************************ END SEARCH ******************************************
+    this.setState({
+        filteredProducts: tempProducts
+    });
+
+};
+```
