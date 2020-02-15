@@ -7,7 +7,9 @@
     npm install --save styled-components 
     npm install --save bootstrap
 ```
-
+## PayPal ##
+    npm install --save react-paypal-express-checkout
+    
 ```
 STORE
 ├── App.js
@@ -85,6 +87,3 @@ export const client = contentful.createClient({
     space: process.env.REACT_APP_SPACE_ID
 });
 ```
-
-## PayPal ##
-    npm install --save react-paypal-express-checkout
