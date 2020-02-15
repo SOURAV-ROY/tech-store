@@ -15,6 +15,7 @@ STORE
 ├── components
 │   |── Aboutpage
 │   |   └── Info
+|   |
 │   ├── CartPage
 │   |   |── Cart.js
 |   |   |── CartColumn.js
@@ -22,8 +23,28 @@ STORE
 |   |   |── CartList.js
 |   |   |── CartTotals.js
 |   |   |── PayPalBtn.js
-|   |   └── index.js
+|   |   └── package.json
+|   |   
+|   |── ContactPage
+|   |   └── Contact.js
+|   |
+|   |── HomePage
+|   |   |── Featured.js
+|   |   └── Services.js
+|   |
+|   |── ProductsPage
+|   |   |── ProductFilter.js
+|   |   └── Products.js
+|   |
+|   |── Footer.js
+|   |── Hero.js
+|   |── Navbar.ja
+|   |── Product.js
+|   |── Sidebar.js
+|   |── SideCart.js
+|   |── Title.js
 │   └── index.js
+|
 └── index.js
 ```
 
