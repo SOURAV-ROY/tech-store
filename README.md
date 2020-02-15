@@ -92,3 +92,35 @@ export const client = contentful.createClient({
     space: process.env.REACT_APP_SPACE_ID
 });
 ```
+## **Set Products** ##
+
+```js
+setProducts = (products) => {
+
+    let storeProducts = products.map(item => {
+        const {id} = item.sys;
+        const image = item.fields.image.fields.file.url;
+        const product = {id, ...item.fields, image};
+        return product;
+    });
+
+    let featuredProducts = storeProducts.filter(item => item.featured === true);
+
+    let maxPrice = Math.max(...storeProducts.map(item => item.price));
+
+    this.setState({
+        storeProducts,
+        filteredProducts: storeProducts,
+        featuredProducts,
+        cart: this.getStorageCart(),
+        singleProduct: this.getStorageProduct(),
+        loading: false,
+
+        price: maxPrice,
+        max: maxPrice
+
+    }, () => {
+        this.addTotals();
+    });
+};
+```
