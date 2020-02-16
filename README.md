@@ -40,7 +40,7 @@ STORE
 |   |
 |   |── Footer.js
 |   |── Hero.js
-|   |── Navbar.ja
+|   |── Navbar.js
 |   |── Product.js
 |   |── Sidebar.js
 |   |── SideCart.js
