@@ -291,4 +291,4 @@ decrement = (id) => {
 ```
 
 ##### [MIT LICENSE](https://github.com/SOURAV-ROY/tech-store/blob/master/LICENSE) #####
-###Copyright (c) 2020 SOURAV ROY ####
+### Copyright (c) 2020 SOURAV ROY ###
