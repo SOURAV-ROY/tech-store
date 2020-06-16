@@ -5,24 +5,24 @@ export const socialData = [
     {
         id: 1,
         icon: <FaGithub className="icon"/>,
-        url: 'https://www.github.com'
+        url: 'https://github.com/SOURAV-ROY/tech-store'
     },
 
     {
         id: 2,
         icon: <FaFacebook className="icon"/>,
-        url: 'https://www.facebook.com'
+        url: 'https://facebook.com/SOURAVROY.CSE'
     },
 
     {
         id: 3,
         icon: <FaTwitter className="icon"/>,
-        url: 'https://www.twitter.com'
+        url: 'https://twitter.com/SOURAVROY__CSE'
     },
 
     {
         id: 4,
         icon: <FaLinkedin className="icon"/>,
-        url: 'https://www.linkedin.com'
+        url: 'https://www.linkedin.com/in/souravroy-cse/'
     }
 ];
