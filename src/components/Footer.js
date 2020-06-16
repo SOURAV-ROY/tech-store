@@ -18,7 +18,8 @@ export default function Footer() {
                                 </div>
                                 <div className="col-md-6 d-flex justify-content-around">
                                     {value.socialIcons.map(item => (
-                                        <a href={item.url} key={item.id}>
+                                        // eslint-disable-next-line react/jsx-no-target-blank
+                                        <a target="_blank" href={item.url} key={item.id}>
                                             {item.icon}
                                         </a>
                                     ))}
