@@ -16,6 +16,7 @@ const Contact = () => {
                                 name="name"
                                 className="form-control"
                                 placeholder="Alien"
+                                required={true}
                             />
                         </div>
 
@@ -26,6 +27,7 @@ const Contact = () => {
                                 name="email"
                                 className="form-control"
                                 placeholder="alien@gmail.com"
+                                required={true}
                             />
                         </div>
 
@@ -35,7 +37,8 @@ const Contact = () => {
                                 type="text"
                                 name="subject"
                                 className="form-control"
-                                placeholder="SUBJECT!!!"
+                                placeholder="SUBJECT !!"
+                                required={true}
                             />
                         </div>
 
@@ -45,7 +48,8 @@ const Contact = () => {
                                 name="message"
                                 className="form-control"
                                 rows="8"
-                                placeholder="Hello There Buddy"
+                                placeholder="Hello Buddy, You Are Great !!"
+                                required={true}
                             />
                         </div>
                         <div className="form-group mt-3">
